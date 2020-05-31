@@ -12,6 +12,7 @@
 /* цвет рамки в карточках портфолио #EEEEEE */
 /* цвет контактов в футере  rgba(255, 255, 255, 0.6) */
 /* цвет копирайта на футере rgba(255, 255, 255, 0.4) */
+/* цвет фона иконок соцсетей в футере rgba(255, 255, 255, 0.1) */
 
 :root {
   --primary-white-color: #ffffff;
@@ -27,7 +28,9 @@
   --portfolio-card-border: #eeeeee;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --footer-copyright-color: rgba(255, 255, 255, 0.4);
+  --footer-icon-background: rgba(255, 255, 255, 0.1);
 }
+
 /* Общий стиль страницы */
 
 body {
@@ -157,13 +160,13 @@ img {
 .header-contacts .link:hover,
 .header-contacts .link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
+  --color4: var(--accent-color);
 }
 
 .header-contacts .link {
   display: flex;
   align-items: center;
-  fill: var(--primary-text-color);
+  --color4: var(--primary-text-color);
 }
 .contacts-icon {
   margin-right: 10px;
@@ -260,12 +263,6 @@ img {
 .features-list {
   display: flex;
 }
-/* 
-.features-img {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 30px;
-} */
 
 .features-list .item + .item {
   margin-left: 30px;
@@ -387,7 +384,7 @@ img {
 }
 .soc-button:hover,
 .soc-button:focus {
-  fill: var(--primary-white-color);
+  --color3: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
@@ -416,7 +413,7 @@ img {
 
 .client-icon:hover,
 .client-icon:focus {
-  fill: var(--accent-color);
+  --color3: var(--accent-color);
   border-color: var(--accent-color);
 }
 
@@ -447,9 +444,9 @@ img {
   align-items: center;
   height: 44px;
   width: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-icon-background);
   border-radius: 50%;
-  fill: var(--primary-white-color);
+  --color3: var(--primary-white-color);
 }
 
 .footer-social-networks .soc-button:hover,
@@ -593,7 +590,6 @@ img {
 
 .portfolio .card {
   display: block;
-  border-radius: 5px;
   overflow: hidden;
 }
 .portfolio-list .item:hover,
